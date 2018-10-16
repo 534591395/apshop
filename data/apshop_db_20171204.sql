@@ -189,9 +189,9 @@ CONSTRAINT PK_user PRIMARY KEY(uid)
 );
 ALTER TABLE user COMMENT= '用户表';
 ALTER TABLE user AUTO_INCREMENT=10000000;
-CREATE UNIQUE INDEX IDX_user_username ON User(username);
-CREATE UNIQUE INDEX IDX_user_IDNO ON User(IDNO);
-CREATE UNIQUE INDEX IDX_user_cell ON User(cell);
+CREATE UNIQUE INDEX IDX_user_username ON user(username);
+CREATE UNIQUE INDEX IDX_user_IDNO ON user(IDNO);
+CREATE UNIQUE INDEX IDX_user_cell ON user(cell);
 
 -- 用户登录表: userLogin, 同一个UID的加密密码是相同的
 DROP TABLE IF EXISTS userLogin;
