@@ -14,7 +14,7 @@ exports.sequelize  = {
     // 用户名
     username: 'apshop',
     // 密码
-    password: 'apShop147852',
+    password: '111',
     // 数据库名
     database: 'apshop',
     pool: {
