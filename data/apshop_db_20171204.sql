@@ -49,22 +49,22 @@ set character_set_results     = utf8mb4;
 set character_set_server      = utf8mb4;
 
 -- ----------------------------------------------------------------
--- 简易词典表和词典标题表: wordbookTitle, wordbook
+-- 简易词典表和词典标题表: WordbookTitle, Wordbook
 -- 建立: kunoy 20171101
 -- WordbookTitle与Wordbook需建立外键
 -- 所有关键字字母均需为大写
 -- ----------------------------------------------------------------
-DROP TABLE IF EXISTS wordbook;
-DROP TABLE IF EXISTS wordbookTitle;
-CREATE TABLE wordbookTitle
+DROP TABLE IF EXISTS Wordbook;
+DROP TABLE IF EXISTS WordbookTitle;
+CREATE TABLE WordbookTitle
 (
 keyword				VARCHAR(30) NOT NULL			COMMENT '词典关键字',
 keywordDESC		TEXT NOT NULL					COMMENT '词典关键字说明',
-CONSTRAINT PK_wordbookTitle PRIMARY KEY(keyword)
+CONSTRAINT PK_WordbookTitle PRIMARY KEY(keyword)
 );
-ALTER TABLE wordbookTitle COMMENT= '词典标题表';
+ALTER TABLE WordbookTitle COMMENT= '词典标题表';
 
-CREATE TABLE wordbook
+CREATE TABLE Wordbook
 (
 keyword				VARCHAR(30) NOT NULL			COMMENT '词典关键字',
 wordValue			VARCHAR(30) NOT NULL			COMMENT '关键字的值',
@@ -72,9 +72,9 @@ wordDisplay		VARCHAR(100) NOT NULL			COMMENT '关键字显示的中文值',
 sortNo				INT DEFAULT 0 NOT NULL			COMMENT '显示顺序',
 status				CHAR(1) DEFAULT '0' NOT NULL	COMMENT '字典状态(0=正常, S=失效)',
 note				TEXT							COMMENT '备注',
-CONSTRAINT PK_wordbook PRIMARY KEY(keyword,wordValue)
+CONSTRAINT PK_Wordbook PRIMARY KEY(keyword,wordValue)
 );
-ALTER TABLE wordbook COMMENT= '简易词典表';
+ALTER TABLE Wordbook COMMENT= '简易词典表';
 
 -- ----------------------------------------------------------------
 -- 系统配置表: config
