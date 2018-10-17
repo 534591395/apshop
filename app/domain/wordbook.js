@@ -31,6 +31,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   }, {
-    tableName: 'wordbook'
+    tableName: 'Wordbook'
   });
 };

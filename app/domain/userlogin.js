@@ -25,6 +25,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: '0'
     }
   }, {
-    tableName: 'userlogin'
+    tableName: 'userLogin'
   });
 };

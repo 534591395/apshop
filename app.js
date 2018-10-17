@@ -17,7 +17,7 @@ module.exports = app => {
             });
             info.cartCount=res.count;
             info.cart=res.rows;
-            info.page_title='天启皮肤商城';
+            info.page_title='梦想兔个人电商平台';
             return info;
         }
         success(msg,data,total) {

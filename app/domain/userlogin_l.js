@@ -30,6 +30,6 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('CURRENT_TIMESTAMP')
     }
   }, {
-    tableName: 'userlogin_l'
+    tableName: 'userLogin_L'
   });
 };

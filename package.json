@@ -4,6 +4,7 @@
   "description": "apshop plat",
   "scripts": {
     "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
     "migrate:new": "egg-sequelize migration:create",
     "migrate:up": "egg-sequelize db:migrate",
     "migrate:down": "egg-sequelize db:migrate:undo"
